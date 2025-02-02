@@ -1,0 +1,86 @@
+/* Modal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: aliceblue;
+}
+
+.modal {
+  background-color: #22262b;
+  padding: 20px;
+  border-radius: 10px; /* Increased border radius for a more noticeable effect */
+  text-align: left;
+  width: 70%;
+  height: 85%;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  color: aliceblue;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-btn:focus {
+  outline: none;
+}
+
+/* Big box with dotted border */
+/* Big box with dotted border */
+.big-box {
+  border: 2px dashed #616870;
+  border-radius: 15px; /* Increased border radius for a rounder look */
+  padding: 20px;
+  margin: 20px 0;
+  height: 60%;
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center;
+}
+
+
+/* Row of smaller boxes */
+.small-boxes {
+  display: flex;
+  justify-content: space-between;
+  height: 15%;
+  gap: 20px;
+}
+
+.small-box {
+  border: 1px solid #4d5053;
+  padding: 20px;
+  border-radius: 15px; /* Increased border radius for consistency */
+  flex: 1; /* Ensures all boxes take equal width */
+  text-align: center;
+  color: aliceblue;
+}
+/* Modal.css */
+
+/* Modal title (h2) */
+.modal h2 {
+  font-size: 2rem; /* Increase font size */
+  margin-bottom: 20px; /* Optional: Add space below the title */
+}
+
+/* Modal paragraph (p) */
+.modal p {
+  font-size: 1.25rem; /* Increase font size */
+  margin-bottom: 30px; /* Optional: Add space below the paragraph */
+}

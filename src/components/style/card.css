@@ -1,76 +1,94 @@
-/* Card.css */
+/* Main card styles */
 .card {
-    position: relative;
-    margin-top: 30px;
-    margin: 0 10%;  /* Set left and right margins to 10% for responsiveness */
-    max-width: 400px; /* Set max width */
-    width: 100%;
-    height: auto; /* Adjust height to content */
-    border-radius: 20px;
-    border: 2px solid #504f4f;
-    background: linear-gradient(to bottom, black, rgb(66, 64, 64));
-    padding: 20px;
-  }
+  position: relative;
+  margin-top: 30px;
+  margin: 0 10%;  /* Set left and right margins to 10% for responsiveness */
+  max-width: 400px; /* Set max width */
+  width: 100%;
+  height: auto; /* Adjust height to content */
+  border-radius: 20px;
+  border: 2px solid #504f4f;
+  background: linear-gradient(to bottom, black, rgb(66, 64, 64));
+  padding: 20px;
+  overflow: hidden; /* Prevent overflow */
+}
 
-  .cardgrid {
+/* Card grid container for multiple cards */
+.cardgrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Update with a reasonable minimum size */
   gap: 20px;
   padding: 20px;
 }
-  
-  .laptopicon {
-    height: 40px;
-    margin-top: 20px;
+
+/* Icon container styling */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between icon and MoreVertIcon */
+}
+
+.laptopicon {
+  height: 40px;
+  margin-top: 20px;
+}
+
+.more-icon {
+  color: aliceblue;
+  font-size: 20px;
+}
+
+/* Name styling with handling for larger names */
+.name {
+  font-size: 2rem;
+  color: rgb(196, 197, 199);
+  margin-top: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  word-wrap: break-word; /* Ensure long names wrap onto new lines */
+  white-space: normal; /* Allow the name to break into multiple lines */
+  overflow-wrap: break-word; /* Ensure long words break correctly */
+}
+
+/* Date styling */
+.date {
+  font-size: 1rem;
+  color: aliceblue;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .card {
+    margin: 0 5%;
+    padding: 15px;
   }
-  
-  .icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Space between icon and MoreVertIcon */
-  }
-  
-  .more-icon {
-    color: aliceblue;
-    font-size: 20px;
-  }
-  
+
   .name {
-    font-size: 2rem;
-    color: rgb(196, 197, 199);
-    margin-top: 60px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
   }
-  
+
   .date {
-    font-size: 1rem;
-    color: aliceblue;
+    font-size: 0.9rem;
   }
-  
-  @media screen and (max-width: 768px) {
-    .card {
-      margin: 0 5%;
-      padding: 15px;
-    }
-  
-    .name {
-      font-size: 1.5rem;
-    }
-  
-    .date {
-      font-size: 0.9rem;
-    }
-    @media (max-width: 768px) {
-  .card-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller cards for mobile */
+
+  .cardgrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
   }
 }
 
 @media (max-width: 480px) {
-  .card-grid {
+  .cardgrid {
     grid-template-columns: 1fr; /* Stack cards on top of each other on very small screens */
   }
-}
 
+  .name {
+    font-size: 1.3rem; /* Smaller font size for name on mobile */
   }
-  
+
+  .date {
+    font-size: 0.85rem; /* Smaller font size for date */
+  }
+
+  .card {
+    margin: 0 10px;  /* Remove large margins for very small screens */
+  }
+}

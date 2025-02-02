@@ -1,0 +1,43 @@
+/* EditPage.css */
+
+/* Set background color for the whole page */
+body {
+  background-color: #37383b;
+  margin: 0; /* Remove default body margin */
+  font-family: Arial, sans-serif; /* Optional: For better styling */
+}
+
+/* Overall page container */
+.page-container {
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 2%;
+  width: 90%;
+}
+
+/* Each section */
+.section {
+  background-color: #22262b; /* This color is kept for sections */
+  color: white;
+  border-radius: 3%;
+  margin: 10px 0;
+  padding: 40px;
+  font-size: 24px;
+  text-align: center;
+  flex-grow: 0; /* Prevents sections from growing */
+  flex-shrink: 0; /* Prevents sections from shrinking */
+}
+
+.section:nth-child(1) {
+  width: 20%;
+}
+
+.section:nth-child(2) {
+  width: 40%;
+}
+
+.section:nth-child(3) {
+  width: 30%;
+}

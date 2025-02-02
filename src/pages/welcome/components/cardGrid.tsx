@@ -5,7 +5,7 @@ function CardGrid() {
   // Mock data array
   const cardData = [
     {
-      name: "Harshendra Kumar Upadhyay",
+      name: "john Doe",
       date: "Feb 02, 2025.1 source",
       imageSrc: laptopicon,
     },
