@@ -14,7 +14,6 @@ const EditPage: React.FC = () => {
   return (
     <>
       {isModalVisible && <Modal onClose={closeModal} />}
-      {/* Show modal when isModalVisible is true */}
       <Header />
       <div className="page-container">
         <div className="section">Section 1</div>
